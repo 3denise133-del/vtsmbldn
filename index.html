@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Soumbala Naturel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        /* ---------- EN-TÊTE ---------- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 4px solid #e67e22;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #e67e22;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo h1 i {
+            font-size: 2rem;
+            color: #e67e22;
+            background: #fff1e0;
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .logo h1 span {
+            color: #2c2c2c;
+            font-weight: 300;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2c2c2c;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.4rem 0.2rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        nav ul li a i {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            border-bottom-color: #e67e22;
+            color: #e67e22;
+        }
+
+        /* ---------- PRÉSENTATION ---------- */
+        .presentation {
+            background: linear-gradient(145deg, #fff5e9 0%, #ffffff 100%);
+            padding: 3.5rem 2rem;
+            margin: 0;
+            border-bottom: 1px solid #ffe6cc;
+        }
+
+        .presentation-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .presentation h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .presentation h2 span {
+            background-color: #e67e22;
+            color: #ffffff;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 1.2rem;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+            font-weight: 500;
+        }
+
+        .presentation p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto;
+            color: #3d3d3d;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem 1.8rem;
+            border-radius: 60px 20px 60px 20px;
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.1);
+        }
+
+        /* ---------- CARTES ---------- */
+        .cards-section {
+            padding: 4rem 2rem;
+            background-color: #ffffff;
+        }
+
+        .cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 30px 12px 30px 12px;
+            padding: 2.2rem 1.8rem;
+            flex: 1 1 260px;
+            max-width: 340px;
+            box-shadow: 0 15px 30px rgba(230, 126, 34, 0.12);
+            border: 1px solid #ffe1c6;
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(230, 126, 34, 0.22);
+            border-color: #e67e22;
+        }
+
+        .card-icon {
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff1e0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            color: #e67e22;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            background: #e67e22;
+            color: #ffffff;
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed #ffd8b3;
+            padding-bottom: 0.7rem;
+            display: inline-block;
+        }
+
+        .card p {
+            color: #3e3e3e;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ---------- GALERIE CARROUSEL ---------- */
+        .galerie {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #ffffff 0%, #fff9f2 100%);
+        }
+
+        .galerie-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .galerie-titre {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .galerie-titre h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-bottom: 0.8rem;
+        }
+
+        .galerie-titre h2 i {
+            margin-right: 0.5rem;
+        }
+
+        .galerie-titre p {
+            font-size: 1.15rem;
+            color: #555;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Carrousel */
+        .carrousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px 12px 30px 12px;
+            box-shadow: 0 25px 50px rgba(230, 126, 34, 0.2);
+            border: 3px solid #ffe1c6;
+            background: #fff5e9;
+        }
+
+        .carrousel-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carrousel-slide {
+            min-width: 100%;
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+
+        .carrousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 8s ease;
+        }
+
+        .carrousel-slide.active img {
+            transform: scale(1.08);
+        }
+
+        .carrousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(230, 126, 34, 0.95) 0%, rgba(230, 126, 34, 0.7) 50%, transparent 100%);
+            color: #ffffff;
+            padding: 3rem 2rem 1.8rem;
+            text-align: left;
+        }
+
+        .carrousel-caption h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .carrousel-caption p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+
+        /* Boutons de navigation */
+        .carrousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            color: #e67e22;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+        }
+
+        .carrousel-btn:hover {
+            background: #e67e22;
+            color: #ffffff;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carrousel-btn.prev {
+            left: 1.5rem;
+        }
+
+        .carrousel-btn.next {
+            right: 1.5rem;
+        }
+
+        /* Indicateurs (dots) */
+        .carrousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.7rem;
+            margin-top: 1.8rem;
+        }
+
+        .carrousel-dots .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffd8b3;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carrousel-dots .dot.active {
+            background: #e67e22;
+            transform: scale(1.25);
+            border-color: #ffe1c6;
+        }
+
+        .carrousel-dots .dot:hover {
+            background: #e67e22;
+            opacity: 0.8;
+        }
+
+        /* ---------- PIED DE PAGE ---------- */
+        footer {
+            background-color: #e67e22;
+            color: #ffffff;
+            padding: 2.5rem 2rem 1.5rem;
+            margin-top: 1rem;
+            border-top: 8px solid #ffffff;
+            box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .footer-contact h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            border-left: 5px solid #ffffff;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-contact h4 i {
+            font-size: 1.3rem;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #fff7ed;
+        }
+
+        .footer-contact p i {
+            background: #ffffff;
+            color: #e67e22;
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .footer-copy {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            color: #fff1e0;
+        }
+
+        .footer-copy strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 850px) {
+            .carrousel-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+
+            .carrousel-btn.prev {
+                left: 0.8rem;
+            }
+
+            .carrousel-btn.next {
+                right: 0.8rem;
+            }
+
+            .carrousel-caption h3 {
+                font-size: 1.4rem;
+            }
+
+            .carrousel-caption p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav ul {
+                gap: 1.2rem;
+                justify-content: center;
+                margin-top: 0.5rem;
+            }
+
+            .presentation h2 {
+                font-size: 1.9rem;
+            }
+
+            .presentation p {
+                font-size: 1.1rem;
+                padding: 1.2rem;
+            }
+
+            .card {
+                flex: 1 1 100%;
+                max-width: 400px;
+            }
+
+            .galerie-titre h2 {
+                font-size: 1.9rem;
+            }
+
+            .carrousel-slide {
+                aspect-ratio: 4 / 3;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .footer-contact h4 {
+                border-left: none;
+                border-bottom: 3px solid #ffffff;
+                display: inline-flex;
+                padding-bottom: 0.4rem;
+                padding-left: 0;
+            }
+
+            .footer-contact p {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo h1 i {
+                font-size: 1.5rem;
+                width: 40px;
+                height: 40px;
+            }
+
+            nav ul {
+                gap: 0.8rem;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+            }
+
+            .presentation h2 span {
+                display: block;
+                margin: 0.6rem auto 0;
+                width: fit-content;
+            }
+
+            .galerie {
+                padding: 2.5rem 1rem;
+            }
+
+            .carrousel-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 0.9rem;
+            }
+
+            .carrousel-caption {
+                padding: 2rem 1rem 1.2rem;
+            }
+
+            .carrousel-caption h3 {
+                font-size: 1.1rem;
+            }
+
+            .carrousel-caption p {
+                font-size: 0.85rem;
+            }
+
+            .carrousel-dots .dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EN-TÊTE avec titre et menu -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>
+                    <i class="fa-solid fa-seedling"></i>
+                    Soumbala<span>Naturel</span>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                    <li><a href="#"><i class="fa-solid fa-basket-shopping"></i> Nos produits</a></li>
+                    <li><a href="#"><i class="fa-solid fa-images"></i> Galerie</a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION DE PRÉSENTATION -->
+    <section class="presentation">
+        <div class="presentation-container">
+            <h2>
+                Le vrai goût du Soumbala
+                <span>100% naturel</span>
+            </h2>
+            <p>
+                Découvrez notre soumbala artisanal, préparé selon la tradition africaine.
+                Sans additifs, sans conservateurs, il apporte une saveur authentique et
+                umami à tous vos plats : sauces, riz, ragoûts et bien plus encore.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3 CARTES avec titre et texte -->
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>100% Naturel</h3>
+                <p>
+                    Soumbala issu de graines de néré fermentées, séchées au soleil et
+                    transformées sans aucun additif chimique. Un produit pur et sain.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                <h3>Saveur Authentique</h3>
+                <p>
+                    Un goût riche et profond qui rehausse vos sauces, couscous, riz
+                    et plats traditionnels. La véritable épice africaine.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h3>Emballage Soigné</h3>
+                <p>
+                    Conditionné avec soin pour préserver tous ses arômes.
+                    Disponible en sachets de 100g, 250g et 500g.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE D'IMAGES EN CARROUSEL -->
+    <section class="galerie">
+        <div class="galerie-container">
+            <div class="galerie-titre">
+                <h2><i class="fa-solid fa-images"></i> Notre Galerie</h2>
+                <p>Découvrez notre soumbala naturel à travers quelques images authentiques de notre production artisanale.</p>
+            </div>
+
+            <div class="carrousel-wrapper">
+                <div class="carrousel-track" id="carrouselTrack">
+
+                    <div class="carrousel-slide active">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1200&auto=format&fit=crop&q=80" alt="Graines de néré séchées au soleil">
+                        <div class="carrousel-caption">
+                            <h3><i class="fa-solid fa-seedling"></i> Graines de néré</h3>
+                            <p>Matière première soigneusement sélectionnée et séchée naturellement au soleil.</p>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-slide">
+                        <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=1200&auto=format&fit=crop&q=80" alt="Soumbala en poudre traditionnel">
+                        <div class="carrousel-caption">
+                            <h3><i class="fa-solid fa-mortar-pestle"></i> Soumbala en poudre</h3>
+                            <p>Mouture traditionnelle pour un goût intense et authentique.</p>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-slide">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&auto=format&fit=crop&q=80" alt="Préparation artisanale du soumbala">
+                        <div class="carrousel-caption">
+                            <h3><i class="fa-solid fa-hands"></i> Préparation artisanale</h3>
+                            <p>Fermentation et séchage selon un savoir-faire transmis de génération en génération.</p>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-slide">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&auto=format&fit=crop&q=80" alt="Conditionnement du soumbala">
+                        <div class="carrousel-caption">
+                            <h3><i class="fa-solid fa-box"></i> Conditionnement soigné</h3>
+                            <p>Disponible en sachets de 100g, 250g et 500g pour préserver tous les arômes.</p>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-slide">
+                        <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=1200&auto=format&fit=crop&q=80" alt="Plat africain au soumbala">
+                        <div class="carrousel-caption">
+                            <h3><i class="fa-solid fa-utensils"></i> Saveur en cuisine</h3>
+                            <p>Idéal pour vos sauces, ragoûts, riz et plats traditionnels africains.</p>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-slide">
+                        <img src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=1200&auto=format&fit=crop&q=80" alt="Marché africain traditionnel">
+                        <div class="carrousel-caption">
+                            <h3><i class="fa-solid fa-store"></i> Tradition africaine</h3>
+                            <p>Un produit du terroir, issu d'un savoir-faire local et authentique.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carrousel-btn prev" id="prevBtn" aria-label="Image précédente">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carrousel-btn next" id="nextBtn" aria-label="Image suivante">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carrousel-dots" id="carrouselDots"></div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE avec contact -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h4><i class="fa-solid fa-address-book"></i> Contactez-nous</h4>
+                <p><i class="fa-solid fa-phone"></i> +226 54299523</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@soumbala-naturel.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Banfora, Burkina Faso</p>
+            </div>
+            <div class="footer-contact">
+                <h4><i class="fa-solid fa-clock"></i> Horaires</h4>
+                <p><i class="fa-solid fa-calendar-days"></i> Lun – Ven : 8h – 18h</p>
+                <p><i class="fa-solid fa-calendar-check"></i> Samedi : 9h – 14h</p>
+                <p><i class="fa-solid fa-truck"></i> Livraison possible</p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 <strong>Soumbala Naturel</strong> — Tous droits réservés.
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const track = document.getElementById('carrouselTrack');
+            const slides = track.querySelectorAll('.carrousel-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('carrouselDots');
+
+            let currentIndex = 0;
+            let autoplayInterval = null;
+            const totalSlides = slides.length;
+            const autoplayDelay = 5000;
+
+            // Créer les indicateurs (dots)
+            slides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = dotsContainer.querySelectorAll('.dot');
+
+            function updateCarrousel() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentIndex);
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                if (currentIndex < 0) currentIndex = totalSlides - 1;
+                if (currentIndex >= totalSlides) currentIndex = 0;
+                updateCarrousel();
+                resetAutoplay();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, autoplayDelay);
+            }
+
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Navigation clavier
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') nextSlide();
+                if (e.key === 'ArrowLeft') prevSlide();
+            });
+
+            // Support tactile (swipe)
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const wrapper = document.querySelector('.carrousel-wrapper');
+
+            wrapper.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            wrapper.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) nextSlide();
+                    else prevSlide();
+                }
+            }
+
+            // Pause au survol
+            wrapper.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+            wrapper.addEventListener('mouseleave', startAutoplay);
+
+            // Lancer l'autoplay
+            startAutoplay();
+            updateCarrousel();
+        })();
+    </script>
+
+</body>
+</html>
